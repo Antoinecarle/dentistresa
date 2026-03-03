@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposition Commerciale — Arenas Dentistes & Génération Implant</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #02adc6;
+    --primary-dark: #0295a8;
+    --dark: #202020;
+    --dark-soft: #353740;
+    --text: #525866;
+    --text-light: #737c92;
+    --bg: #ffffff;
+    --bg-alt: #f7f9fc;
+    --border: #e8ecf1;
+    --accent-gold: #c9a84c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── COVER PAGE ─── */
+  .cover {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--dark) 0%, #1a2a30 50%, var(--dark-soft) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(2, 173, 198, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    left: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(2, 173, 198, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    padding: 8px 28px;
+    border: 1px solid rgba(2, 173, 198, 0.4);
+    border-radius: 50px;
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 strong {
+    font-weight: 800;
+    color: var(--primary);
+  }
+
+  .cover-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-line {
+    width: 60px;
+    height: 2px;
+    background: var(--primary);
+    margin: 0 auto 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-meta {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 60px;
+    margin-top: 20px;
+  }
+
+  .cover-meta-item {
+    text-align: left;
+  }
+
+  .cover-meta-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+    margin-bottom: 8px;
+  }
+
+  .cover-meta-value {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+  }
+
+  .cover-meta-value small {
+    display: block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  .cover-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .cover-footer span {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 1px;
+  }
+
+  /* ─── PAGES ─── */
+  .page {
+    padding: 70px 80px;
+    min-height: 100vh;
+    page-break-after: always;
+    position: relative;
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 45px;
+  }
+
+  .page-header-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  .page-header-num {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--text-light);
+  }
+
+  /* ─── SECTION TITLES ─── */
+  .section-number {
+    font-family: 'Raleway', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    color: rgba(2, 173, 198, 0.08);
+    line-height: 1;
+    margin-bottom: -20px;
+  }
+
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  h2 span {
+    color: var(--primary);
+  }
+
+  .section-lead {
+    font-size: 15px;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+
+  h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark-soft);
+    margin-bottom: 12px;
+    margin-top: 30px;
+  }
+
+  h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+    margin-bottom: 15px;
+    margin-top: 25px;
+  }
+
+  p {
+    margin-bottom: 14px;
+    line-height: 1.8;
+  }
+
+  /* ─── CARDS ─── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 30px rgba(2, 173, 198, 0.08);
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(2, 173, 198, 0.1), rgba(2, 173, 198, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .card h5 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 0;
+    line-height: 1.7;
+  }
+
+  /* ─── LOT BLOCKS ─── */
+  .lot {
+    background: var(--bg-alt);
+    border-radius: 16px;
+    padding: 35px;
+    margin-bottom: 25px;
+    border-left: 3px solid var(--primary);
+    position: relative;
+  }
+
+  .lot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+
+  .lot-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+
+  .lot-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .lot-price {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .lot-price small {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .lot ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .lot ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+
+  .lot ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    opacity: 0.3;
+  }
+
+  .lot-duration {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 14px;
+    background: rgba(2, 173, 198, 0.08);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  /* ─── PRICING TABLE ─── */
+  .pricing-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 30px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .pricing-table thead th {
+    background: var(--dark);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 16px 24px;
+    text-align: left;
+  }
+
+  .pricing-table thead th:last-child {
+    text-align: right;
+  }
+
+  .pricing-table tbody td {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+
+  .pricing-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .pricing-table tbody td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: var(--dark);
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+  }
+
+  .pricing-table tbody tr:nth-child(even) {
+    background: var(--bg-alt);
+  }
+
+  .pricing-total {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+  }
+
+  .pricing-total td {
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    border-bottom: none !important;
+    padding: 20px 24px !important;
+  }
+
+  .pricing-total td:last-child {
+    font-size: 22px !important;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  /* ─── TIMELINE ─── */
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+    margin: 30px 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), rgba(2, 173, 198, 0.1));
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 3px solid var(--primary);
+  }
+
+  .timeline-week {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+
+  .timeline-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 6px;
+  }
+
+  .timeline-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* ─── HIGHLIGHT BOX ─── */
+  .highlight-box {
+    background: linear-gradient(135deg, var(--dark) 0%, #1a2a30 100%);
+    border-radius: 16px;
+    padding: 40px;
+    color: #fff;
+    margin: 35px 0;
+  }
+
+  .highlight-box h3 {
+    color: #fff;
+    margin-top: 0;
+    font-size: 22px;
+  }
+
+  .highlight-box p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+  }
+
+  .highlight-box .price-big {
+    font-family: 'Raleway', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 15px 0 5px;
+  }
+
+  .highlight-box .price-note {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  /* ─── LIST STYLES ─── */
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .check-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  /* ─── CONDITIONS ─── */
+  .conditions {
+    background: var(--bg-alt);
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+  }
+
+  .conditions h4 {
+    color: var(--dark);
+    margin-top: 0;
+  }
+
+  .conditions p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+  }
+
+  /* ─── SIGNATURE BLOCK ─── */
+  .signature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 50px;
+  }
+
+  .signature-box {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    min-height: 180px;
+  }
+
+  .signature-box h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 12px;
+  }
+
+  .signature-box p {
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .signature-line {
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+    font-size: 11px;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  /* ─── FOOTER ─── */
+  .page-footer {
+    position: absolute;
+    bottom: 30px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+    font-size: 10px;
+    color: var(--text-light);
+  }
+
+  /* ─── UTILS ─── */
+  .mt-0 { margin-top: 0; }
+  .mb-0 { margin-bottom: 0; }
+  .text-primary { color: var(--primary); }
+  .text-dark { color: var(--dark); }
+  .fw-600 { font-weight: 600; }
+  .fw-700 { font-weight: 700; }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 35px 0;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 25px 0;
+  }
+
+  @media print {
+    .page { page-break-after: always; }
+    .cover { page-break-after: always; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     COVER PAGE
+     ══════════════════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-badge">Proposition Commerciale</div>
+  <h1>Structuration des <strong>Parcours<br>de Formation</strong></h1>
+  <p class="cover-subtitle">Architecture de donnees, automatisations & parcours numeriques</p>
+  <div class="cover-line"></div>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Client</div>
+      <div class="cover-meta-value">
+        Arenas Dentistes
+        <small>Generation Implant & entites associees</small>
+      </div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Date</div>
+      <div class="cover-meta-value">
+        3 Mars 2026
+        <small>Validite : 30 jours</small>
+      </div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Reference</div>
+      <div class="cover-meta-value">
+        PROP-2026-0301
+        <small>V1.0</small>
+      </div>
+    </div>
+  </div>
+  <div class="cover-footer">
+    <span>CONFIDENTIEL — A l'attention de Dr. Antoine Diss & Soizic Le Boucher</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE 1 — CONTEXTE & COMPREHENSION
+     ══════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Contexte & Comprehension</span>
+    <span class="page-header-num">01 / 07</span>
+  </div>
+
+  <div class="section-number">01</div>
+  <h2>Comprendre <span>votre besoin</span></h2>
+  <p class="section-lead">Votre organisation repose sur 3 entites juridiques proposant des parcours de formation pour les professionnels dentaires. Vous souhaitez structurer et fiabiliser l'ensemble de la chaine.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">🏥</div>
+      <h5>Arenas Dentistes</h5>
+      <p>Cabinet dentaire de reference a Nice. 10 praticiens, 13 assistantes, 550 m2 d'installations de pointe sur la Promenade des Anglais.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎓</div>
+      <h5>Generation Implant</h5>
+      <p>Centre de formation reconnu depuis 16 ans, formant les chirurgiens-dentistes aux techniques implantaires chirurgicales et prothetiques.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏢</div>
+      <h5>3e Entite</h5>
+      <p>Structure complementaire a identifier lors de notre reunion de cadrage. Ses parcours de formation seront integres a l'architecture globale.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <h5>L'objectif</h5>
+      <p>Repartir sur des fondations robustes et documentees pour gerer l'ensemble des parcours de formation de bout en bout.</p>
+    </div>
+  </div>
+
+  <h3>Les enjeux identifies</h3>
+  <div class="two-col">
+    <div>
+      <h4>Problematiques actuelles</h4>
+      <ul class="check-list">
+        <li>Modele de donnees Airtable non structure, difficile a maintenir</li>
+        <li>Processus manuels chronophages (inscriptions, relances, suivi)</li>
+        <li>Outils non connectes entre eux (Pennylane, WebinarJam, Systeme.io)</li>
+        <li>Pas de vue consolidee pour le pilotage multi-entites</li>
+        <li>Gestion des droits d'acces insuffisante</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Resultats attendus</h4>
+      <ul class="check-list">
+        <li>Une base de donnees claire, normalisee et documentee</li>
+        <li>Des automatisations fiables de bout en bout</li>
+        <li>Des formulaires professionnels pour chaque etape</li>
+        <li>Un pilotage en temps reel des formations</li>
+        <li>Des profils utilisateurs avec acces differencies</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Proposition PROP-2026-0301 — Confidentiel</span>
+    <span>Page 1 / 7</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE 2 — ARCHITECTURE PROPOSEE
+     ══════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Architecture Proposee</span>
+    <span class="page-header-num">02 / 07</span>
+  </div>
+
+  <div class="section-number">02</div>
+  <h2>L'architecture <span>cible</span></h2>
+  <p class="section-lead">Un ecosysteme connecte ou Airtable devient votre source de verite, alimentee et exploitee automatiquement par vos outils metier.</p>
+
+  <!-- ARCHITECTURE DIAGRAM -->
+  <div style="background: var(--bg-alt); border-radius: 16px; padding: 45px 35px; margin: 30px 0;">
+    <div style="text-align: center; margin-bottom: 30px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--primary);">Flux de donnees</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 30px auto 30px 1fr; gap: 12px; align-items: center; max-width: 780px; margin: 0 auto;">
+
+      <!-- LEFT COLUMN — Sources -->
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+          <div style="font-size: 22px; margin-bottom: 6px;">📧</div>
+          <div style="font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 14px; color: var(--dark);">Systeme.io</div>
+          <div style="font-size: 11px; color: var(--text-light); margin-top: 2px;">Inscriptions & ventes</div>
+        </div>
+        <div style="background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+          <div style="font-size: 22px; margin-bottom: 6px;">🎥</div>
+          <div style="font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 14px; color: var(--dark);">WebinarJam</div>
+          <div style="font-size: 11px; color: var(--text-light); margin-top: 2px;">Webinaires de formation</div>
+        </div>
+        <div style="background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+          <div style="font-size: 22px; margin-bottom: 6px;">📝</div>
+          <div style="font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 14px; color: var(--dark);">Formulaires</div>
+          <div style="font-size: 11px; color: var(--text-light); margin-top: 2px;">Inscriptions en ligne</div>
+        </div>
+      </div>
+
+      <!-- ARROWS LEFT → CENTER -->
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 50px; padding: 20px 0;">
+        <div style="color: var(--primary); font-size: 18px; opacity: 0.6;">&#9654;</div>
+        <div style="color: var(--primary); font-size: 18px; opacity: 0.6;">&#9654;</div>
+        <div style="color: var(--primary); font-size: 18px; opacity: 0.6;">&#9654;</div>
+      </div>
+
+      <!-- CENTER — Airtable Hub -->
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+
+        <div style="background: linear-gradient(135deg, var(--dark) 0%, #1a2a30 100%); border-radius: 16px; padding: 35px 30px; text-align: center; min-width: 160px; box-shadow: 0 8px 32px rgba(2, 173, 198, 0.15); border: 1px solid rgba(2, 173, 198, 0.2);">
+          <div style="font-size: 32px; margin-bottom: 10px;">📊</div>
+          <div style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 600; color: var(--primary); letter-spacing: 2px; text-transform: uppercase;">Airtable</div>
+          <div style="font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 4px;">Hub central de donnees</div>
+          <div style="margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div style="font-size: 10px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Source de verite</div>
+            <div style="display: flex; gap: 6px; justify-content: center; flex-wrap: wrap;">
+              <span style="background: rgba(2,173,198,0.15); color: var(--primary); font-size: 9px; padding: 3px 8px; border-radius: 4px; font-weight: 600;">3 entites</span>
+              <span style="background: rgba(2,173,198,0.15); color: var(--primary); font-size: 9px; padding: 3px 8px; border-radius: 4px; font-weight: 600;">Normalise</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Make banner below -->
+        <div style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 8px; padding: 8px 20px; text-align: center; margin-top: 5px;">
+          <div style="font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; color: #fff; letter-spacing: 2px; text-transform: uppercase;">⚡ Make — Automatisations</div>
+        </div>
+      </div>
+
+      <!-- ARROWS CENTER → RIGHT -->
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 50px; padding: 20px 0;">
+        <div style="color: var(--primary); font-size: 18px; opacity: 0.6;">&#9654;</div>
+        <div style="color: var(--primary); font-size: 18px; opacity: 0.6;">&#9654;</div>
+        <div style="color: var(--primary); font-size: 18px; opacity: 0.6;">&#9654;</div>
+      </div>
+
+      <!-- RIGHT COLUMN — Outputs -->
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+          <div style="font-size: 22px; margin-bottom: 6px;">💰</div>
+          <div style="font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 14px; color: var(--dark);">Pennylane</div>
+          <div style="font-size: 11px; color: var(--text-light); margin-top: 2px;">Comptabilite & facturation</div>
+        </div>
+        <div style="background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+          <div style="font-size: 22px; margin-bottom: 6px;">📋</div>
+          <div style="font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 14px; color: var(--dark);">Questionnaires</div>
+          <div style="font-size: 11px; color: var(--text-light); margin-top: 2px;">Satisfaction & qualite</div>
+        </div>
+        <div style="background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.04);">
+          <div style="font-size: 22px; margin-bottom: 6px;">🔔</div>
+          <div style="font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 14px; color: var(--dark);">Emails auto</div>
+          <div style="font-size: 11px; color: var(--text-light); margin-top: 2px;">Relances & confirmations</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flow direction labels -->
+    <div style="display: grid; grid-template-columns: 1fr 30px auto 30px 1fr; gap: 12px; max-width: 780px; margin: 15px auto 0;">
+      <div style="text-align: center; font-size: 11px; font-weight: 600; color: var(--primary); letter-spacing: 1px; opacity: 0.7;">ENTREES</div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div style="text-align: center; font-size: 11px; font-weight: 600; color: var(--primary); letter-spacing: 1px; opacity: 0.7;">SORTIES</div>
+    </div>
+  </div>
+
+  <h3>Stack technique retenue</h3>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h5>Airtable</h5>
+      <p>Base de donnees centrale. Modele normalise avec vues operationnelles par entite et tableaux de bord de pilotage.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <h5>Make (Integromat)</h5>
+      <p>Moteur d'automatisation. Scenarios pour connecter tous les outils et orchestrer les flux de donnees.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💰</div>
+      <h5>Pennylane</h5>
+      <p>Synchronisation comptable. Facturation automatique, suivi des paiements, rapprochements.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎥</div>
+      <h5>WebinarJam</h5>
+      <p>Webinaires de formation. Inscription automatique, suivi de presence, remontee des participations.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📧</div>
+      <h5>Systeme.io</h5>
+      <p>Marketing & ventes. Tunnels d'inscription, pages de vente, sequences email automatisees.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📝</div>
+      <h5>Formulaires</h5>
+      <p>Interfaces de collecte. Inscriptions, questionnaires de satisfaction, reclamations, retours.</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Proposition PROP-2026-0301 — Confidentiel</span>
+    <span>Page 2 / 7</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE 3 — PROPOSITION SUPABASE
+     ══════════════════════════════════════════════════════════════ -->
+<div class="page" style="background: linear-gradient(180deg, #ffffff 0%, #f0fafb 100%);">
+  <div class="page-header">
+    <span class="page-header-title">Option Premium — Supabase</span>
+    <span class="page-header-num">03 / 07</span>
+  </div>
+
+  <div class="section-number">03</div>
+  <h2>Aller plus loin avec <span>Supabase</span></h2>
+  <p class="section-lead">Au-dela d'Airtable, nous vous proposons une architecture professionnelle basee sur Supabase — une plateforme backend complete qui elimine les limitations du no-code et vous donne un avantage durable.</p>
+
+  <!-- WHY SUPABASE — Hero banner -->
+  <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); border-radius: 20px; padding: 45px 40px; margin: 25px 0; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -60px; right: -60px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(62, 207, 142, 0.12) 0%, transparent 70%); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -40px; left: -40px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(2, 173, 198, 0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+
+    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px; position: relative; z-index: 1;">
+      <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #3ecf8e, #2da670); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+        <svg width="24" height="24" viewBox="0 0 109 113" fill="none"><path d="M63.7076 110.284C60.8481 113.885 55.0502 111.912 54.9813 107.314L53.9738 40.0627L99.1935 40.0627C107.384 40.0627 111.952 49.5228 106.859 55.9374L63.7076 110.284Z" fill="url(#a)"/><path d="M63.7076 110.284C60.8481 113.885 55.0502 111.912 54.9813 107.314L53.9738 40.0627L99.1935 40.0627C107.384 40.0627 111.952 49.5228 106.859 55.9374L63.7076 110.284Z" fill="url(#b)" fill-opacity=".2"/><path d="M45.317 2.07103C48.1765 -1.53037 53.9745 0.442937 54.0434 5.041L54.4849 72.2922H9.83113C1.64038 72.2922 -2.92775 62.8321 2.1655 56.4175L45.317 2.07103Z" fill="#3ecf8e"/><defs><linearGradient id="a" x1="53.974" y1="54.974" x2="94.163" y2="71.829" gradientUnits="userSpaceOnUse"><stop stop-color="#249361"/><stop offset="1" stop-color="#3ecf8e"/></linearGradient><linearGradient id="b" x1="36.156" y1="30.578" x2="54.484" y2="65.081" gradientUnits="userSpaceOnUse"><stop/><stop offset="1" stop-opacity="0"/></linearGradient></defs></svg>
+      </div>
+      <div>
+        <div style="font-family: 'Raleway', sans-serif; font-size: 22px; font-weight: 800; color: #ffffff;">Supabase</div>
+        <div style="font-size: 12px; color: rgba(255,255,255,0.5);">L'alternative open-source a Firebase — base PostgreSQL</div>
+      </div>
+    </div>
+
+    <p style="color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.8; margin-bottom: 0; position: relative; z-index: 1;">
+      Supabase vous offre une <strong style="color: #3ecf8e;">base de donnees PostgreSQL professionnelle</strong>, une authentification integree, un stockage de fichiers, des API temps reel et des fonctions serveur — le tout heberge et securise. C'est la fondation technique qui vous permettra de scaler sans limites, contrairement aux plafonds inherents d'Airtable.
+    </p>
+  </div>
+
+  <!-- COMPARISON: Airtable vs Supabase -->
+  <h3 style="margin-top: 35px;">Pourquoi depasser Airtable ?</h3>
+
+  <table class="pricing-table" style="margin: 20px 0;">
+    <thead>
+      <tr>
+        <th style="width: 30%;">Critere</th>
+        <th style="text-align: center;">Airtable</th>
+        <th style="text-align: center; background: linear-gradient(135deg, #1a6e4a, #1a5a3e);">Supabase</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="fw-600">Limite d'enregistrements</td>
+        <td style="text-align: center; color: #d35400;">50 000 / base</td>
+        <td style="text-align: center; color: #3ecf8e; font-weight: 600;">Illimite</td>
+      </tr>
+      <tr>
+        <td class="fw-600">Automatisations</td>
+        <td style="text-align: center; color: #d35400;">25 000 runs / mois</td>
+        <td style="text-align: center; color: #3ecf8e; font-weight: 600;">Illimitees (Edge Functions)</td>
+      </tr>
+      <tr>
+        <td class="fw-600">Controle des droits</td>
+        <td style="text-align: center; color: var(--text-light);">Basique (vues)</td>
+        <td style="text-align: center; color: #3ecf8e; font-weight: 600;">Row Level Security (RLS)</td>
+      </tr>
+      <tr>
+        <td class="fw-600">Authentification</td>
+        <td style="text-align: center; color: var(--text-light);">Non incluse</td>
+        <td style="text-align: center; color: #3ecf8e; font-weight: 600;">Integree (email, SSO, OAuth)</td>
+      </tr>
+      <tr>
+        <td class="fw-600">API temps reel</td>
+        <td style="text-align: center; color: var(--text-light);">Webhooks limites</td>
+        <td style="text-align: center; color: #3ecf8e; font-weight: 600;">WebSockets natifs</td>
+      </tr>
+      <tr>
+        <td class="fw-600">Stockage fichiers</td>
+        <td style="text-align: center; color: var(--text-light);">Pieces jointes</td>
+        <td style="text-align: center; color: #3ecf8e; font-weight: 600;">Storage S3 dedie</td>
+      </tr>
+      <tr>
+        <td class="fw-600">Cout annuel (estimatif)</td>
+        <td style="text-align: center; color: #d35400;">~2 400 € / an</td>
+        <td style="text-align: center; color: #3ecf8e; font-weight: 600;">~300 € / an</td>
+      </tr>
+      <tr>
+        <td class="fw-600">Propriete des donnees</td>
+        <td style="text-align: center; color: var(--text-light);">Hebergees chez Airtable</td>
+        <td style="text-align: center; color: #3ecf8e; font-weight: 600;">100% vos donnees</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- OPTIMIZATIONS GRID -->
+  <h3 style="margin-top: 35px;">Les optimisations cles</h3>
+  <p style="font-size: 13px; color: var(--text-light); margin-bottom: 25px;">Chaque brique Supabase repond directement a un besoin identifie dans votre cahier des charges.</p>
+
+  <div class="card-grid">
+    <div class="card" style="border-left: 3px solid #3ecf8e;">
+      <div class="card-icon" style="background: linear-gradient(135deg, rgba(62, 207, 142, 0.15), rgba(62, 207, 142, 0.05));">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ecf8e" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h5>Row Level Security</h5>
+      <p>Chaque utilisateur ne voit que ses donnees. Un formateur accede a ses sessions, la direction a tout. Les regles sont definies au niveau de la base — impossible a contourner, meme par erreur.</p>
+    </div>
+    <div class="card" style="border-left: 3px solid #3ecf8e;">
+      <div class="card-icon" style="background: linear-gradient(135deg, rgba(62, 207, 142, 0.15), rgba(62, 207, 142, 0.05));">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ecf8e" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <h5>Edge Functions</h5>
+      <p>Remplacent les scenarios Make. Envoi d'emails de relance, traitement des inscriptions, generation de rapports — tout se declenche automatiquement sans service tiers ni limitation de runs.</p>
+    </div>
+    <div class="card" style="border-left: 3px solid #3ecf8e;">
+      <div class="card-icon" style="background: linear-gradient(135deg, rgba(62, 207, 142, 0.15), rgba(62, 207, 142, 0.05));">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ecf8e" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <h5>Temps reel</h5>
+      <p>Quand un stagiaire s'inscrit, le tableau de bord se met a jour instantanement. Plus besoin de rafraichir. Notifications en direct pour les reclamations urgentes ou les places restantes.</p>
+    </div>
+    <div class="card" style="border-left: 3px solid #3ecf8e;">
+      <div class="card-icon" style="background: linear-gradient(135deg, rgba(62, 207, 142, 0.15), rgba(62, 207, 142, 0.05));">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ecf8e" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+      </div>
+      <h5>Authentification native</h5>
+      <p>Connexion securisee pour chaque profil : Direction, DAF, Formateur, Secretariat. Pas besoin de gerer des mots de passe Airtable — chacun a son compte avec son niveau d'acces.</p>
+    </div>
+  </div>
+
+  <!-- Architecture Supabase diagram -->
+  <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 16px; padding: 40px; margin-top: 30px;">
+    <div style="text-align: center; margin-bottom: 25px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #3ecf8e;">Architecture Supabase proposee</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+      <!-- Row 1 — Interfaces -->
+      <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(62, 207, 142, 0.2); border-radius: 10px; padding: 18px; text-align: center;">
+        <div style="font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Interface</div>
+        <div style="font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; color: #fff;">Portail Formation</div>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 4px;">Inscription, suivi, satisfaction</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(62, 207, 142, 0.2); border-radius: 10px; padding: 18px; text-align: center;">
+        <div style="font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Interface</div>
+        <div style="font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; color: #fff;">Dashboard Direction</div>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 4px;">KPIs, pilotage, rapports</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(62, 207, 142, 0.2); border-radius: 10px; padding: 18px; text-align: center;">
+        <div style="font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Interface</div>
+        <div style="font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; color: #fff;">Espace Formateur</div>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 4px;">Sessions, participants, emargement</div>
+      </div>
+    </div>
+
+    <!-- Arrow down -->
+    <div style="text-align: center; color: #3ecf8e; font-size: 14px; margin: 8px 0; opacity: 0.5;">&#9660; &nbsp; &#9660; &nbsp; &#9660;</div>
+
+    <!-- Row 2 — Supabase Core -->
+    <div style="background: linear-gradient(135deg, rgba(62, 207, 142, 0.1), rgba(62, 207, 142, 0.03)); border: 1px solid rgba(62, 207, 142, 0.3); border-radius: 14px; padding: 25px; margin-bottom: 15px;">
+      <div style="text-align: center; margin-bottom: 18px;">
+        <span style="font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 600; color: #3ecf8e; letter-spacing: 2px; text-transform: uppercase;">Supabase</span>
+        <span style="font-size: 12px; color: rgba(255,255,255,0.4); margin-left: 8px;">— Backend complet</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+        <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 12px; text-align: center;">
+          <div style="font-size: 16px; margin-bottom: 4px;">🗄️</div>
+          <div style="font-size: 11px; color: #3ecf8e; font-weight: 600;">PostgreSQL</div>
+          <div style="font-size: 10px; color: rgba(255,255,255,0.35);">Base de donnees</div>
+        </div>
+        <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 12px; text-align: center;">
+          <div style="font-size: 16px; margin-bottom: 4px;">🔐</div>
+          <div style="font-size: 11px; color: #3ecf8e; font-weight: 600;">Auth</div>
+          <div style="font-size: 10px; color: rgba(255,255,255,0.35);">Connexion & roles</div>
+        </div>
+        <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 12px; text-align: center;">
+          <div style="font-size: 16px; margin-bottom: 4px;">⚡</div>
+          <div style="font-size: 11px; color: #3ecf8e; font-weight: 600;">Edge Functions</div>
+          <div style="font-size: 10px; color: rgba(255,255,255,0.35);">Automatisations</div>
+        </div>
+        <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 12px; text-align: center;">
+          <div style="font-size: 16px; margin-bottom: 4px;">📁</div>
+          <div style="font-size: 11px; color: #3ecf8e; font-weight: 600;">Storage</div>
+          <div style="font-size: 10px; color: rgba(255,255,255,0.35);">Docs & fichiers</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrow down -->
+    <div style="text-align: center; color: #3ecf8e; font-size: 14px; margin: 8px 0; opacity: 0.5;">&#9660; &nbsp; &#9660; &nbsp; &#9660;</div>
+
+    <!-- Row 3 — Integrations -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px; text-align: center;">
+        <div style="font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7);">Pennylane</div>
+        <div style="font-size: 10px; color: rgba(255,255,255,0.35);">API directe</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px; text-align: center;">
+        <div style="font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7);">WebinarJam</div>
+        <div style="font-size: 10px; color: rgba(255,255,255,0.35);">Webhooks</div>
+      </div>
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px; text-align: center;">
+        <div style="font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7);">Emails (Resend)</div>
+        <div style="font-size: 10px; color: rgba(255,255,255,0.35);">Relances & notifications</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROI / Savings -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 25px;">
+    <div style="background: var(--bg-alt); border-radius: 12px; padding: 22px; text-align: center; border: 1px solid var(--border);">
+      <div style="font-family: 'Raleway', sans-serif; font-size: 28px; font-weight: 800; color: #3ecf8e;">-87%</div>
+      <div style="font-size: 12px; color: var(--text-light); margin-top: 4px;">Cout d'hebergement annuel</div>
+      <div style="font-size: 11px; color: var(--text-light); opacity: 0.6; margin-top: 2px;">~300 € vs ~2 400 € / an</div>
+    </div>
+    <div style="background: var(--bg-alt); border-radius: 12px; padding: 22px; text-align: center; border: 1px solid var(--border);">
+      <div style="font-family: 'Raleway', sans-serif; font-size: 28px; font-weight: 800; color: var(--primary);">0</div>
+      <div style="font-size: 12px; color: var(--text-light); margin-top: 4px;">Limite d'enregistrements</div>
+      <div style="font-size: 11px; color: var(--text-light); opacity: 0.6; margin-top: 2px;">Scalable sans plafond</div>
+    </div>
+    <div style="background: var(--bg-alt); border-radius: 12px; padding: 22px; text-align: center; border: 1px solid var(--border);">
+      <div style="font-family: 'Raleway', sans-serif; font-size: 28px; font-weight: 800; color: var(--primary);">100%</div>
+      <div style="font-size: 12px; color: var(--text-light); margin-top: 4px;">Propriete des donnees</div>
+      <div style="font-size: 11px; color: var(--text-light); opacity: 0.6; margin-top: 2px;">Vos donnees, votre serveur</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Proposition PROP-2026-0301 — Confidentiel</span>
+    <span>Page 3 / 7</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE 4 — LOTS DE TRAVAIL
+     ══════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Lots de Travail</span>
+    <span class="page-header-num">04 / 07</span>
+  </div>
+
+  <div class="section-number">04</div>
+  <h2>Le decoupage <span>en lots</span></h2>
+  <p class="section-lead">5 lots progressifs, de la fondation data jusqu'a la mise en production du parcours complet.</p>
+
+  <div class="lot">
+    <div class="lot-header">
+      <div>
+        <div class="lot-number">Lot 1</div>
+        <div class="lot-title">Audit & Refonte du modele de donnees</div>
+      </div>
+      <div class="lot-price">
+        2 800 €
+        <small>HT</small>
+      </div>
+    </div>
+    <ul>
+      <li>Audit complet de la base Airtable existante (tables, champs, relations, incoherences)</li>
+      <li>Cartographie des processus metier des 3 entites</li>
+      <li>Conception du modele de donnees normalise (schema relationnel documente)</li>
+      <li>Migration et nettoyage des donnees existantes</li>
+      <li>Creation des vues operationnelles par equipe et des vues de pilotage direction</li>
+      <li>Documentation complete du modele (dictionnaire de donnees)</li>
+    </ul>
+    <span class="lot-duration">Duree estimee : 2 semaines</span>
+  </div>
+
+  <div class="lot">
+    <div class="lot-header">
+      <div>
+        <div class="lot-number">Lot 2</div>
+        <div class="lot-title">Scenarios Make & integrations</div>
+      </div>
+      <div class="lot-price">
+        3 200 €
+        <small>HT</small>
+      </div>
+    </div>
+    <ul>
+      <li>Cartographie des API disponibles (Pennylane, WebinarJam, Systeme.io)</li>
+      <li>Conception des scenarios d'automatisation (flux documentes)</li>
+      <li>Scenario Airtable ↔ Pennylane (facturation, suivi paiements)</li>
+      <li>Scenario Airtable ↔ WebinarJam (inscriptions, presences, suivis)</li>
+      <li>Scenario Airtable ↔ Systeme.io (leads, conversions, ventes)</li>
+      <li>Gestion des erreurs, logs et alertes sur chaque scenario</li>
+      <li>Tests end-to-end sur chaque integration</li>
+    </ul>
+    <span class="lot-duration">Duree estimee : 2-3 semaines</span>
+  </div>
+
+  <div class="lot">
+    <div class="lot-header">
+      <div>
+        <div class="lot-number">Lot 3</div>
+        <div class="lot-title">Parcours formation de bout en bout</div>
+      </div>
+      <div class="lot-price">
+        3 500 €
+        <small>HT</small>
+      </div>
+    </div>
+    <ul>
+      <li>Creation des formulaires d'inscription en ligne (responsive, multi-entites)</li>
+      <li>Questionnaires de satisfaction post-formation (avec scoring)</li>
+      <li>Formulaire de reclamations et retours</li>
+      <li>Sequences de relances automatiques (avant, pendant, apres formation)</li>
+      <li>Remontee automatique de toutes les donnees dans Airtable</li>
+      <li>Parcours complet : Inscription → Confirmation → Formation → Evaluation → Suivi</li>
+    </ul>
+    <span class="lot-duration">Duree estimee : 2-3 semaines</span>
+  </div>
+
+  <div class="page-footer">
+    <span>Proposition PROP-2026-0301 — Confidentiel</span>
+    <span>Page 4 / 7</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE 4 — LOTS (SUITE) + TARIFICATION
+     ══════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Lots & Tarification</span>
+    <span class="page-header-num">05 / 07</span>
+  </div>
+
+  <div class="lot">
+    <div class="lot-header">
+      <div>
+        <div class="lot-number">Lot 4</div>
+        <div class="lot-title">Traitement automatise des donnees</div>
+      </div>
+      <div class="lot-price">
+        2 200 €
+        <small>HT</small>
+      </div>
+    </div>
+    <ul>
+      <li>Automatisation du traitement des inscriptions (validation, doublons, enrichissement)</li>
+      <li>Consolidation automatique des retours satisfaction (moyennes, alertes, rapports)</li>
+      <li>Tableaux de bord automatises (KPI formations, taux de satisfaction, taux de remplissage)</li>
+      <li>Rapports periodiques generes automatiquement (hebdo/mensuel)</li>
+      <li>Alertes intelligentes (reclamation urgente, faible taux de satisfaction, places restantes)</li>
+    </ul>
+    <span class="lot-duration">Duree estimee : 1-2 semaines</span>
+  </div>
+
+  <div class="lot">
+    <div class="lot-header">
+      <div>
+        <div class="lot-number">Lot 5</div>
+        <div class="lot-title">Profils utilisateurs & droits d'acces</div>
+      </div>
+      <div class="lot-price">
+        1 800 €
+        <small>HT</small>
+      </div>
+    </div>
+    <ul>
+      <li>Definition des profils utilisateurs (Direction, Administratif, Formateur, Secretariat)</li>
+      <li>Configuration des niveaux d'acces par profil (lecture, ecriture, administration)</li>
+      <li>Vues personnalisees par role (chaque profil ne voit que ce qui le concerne)</li>
+      <li>Interface de gestion des utilisateurs et de leurs permissions</li>
+      <li>Documentation des profils et matrice de droits</li>
+    </ul>
+    <span class="lot-duration">Duree estimee : 1 semaine</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <h3>Recapitulatif financier</h3>
+
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>Lot</th>
+        <th>Description</th>
+        <th>Montant HT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="fw-600">Lot 1</td>
+        <td>Audit & Refonte du modele de donnees Airtable</td>
+        <td>2 800 €</td>
+      </tr>
+      <tr>
+        <td class="fw-600">Lot 2</td>
+        <td>Scenarios Make & integrations (Pennylane, WebinarJam, Systeme.io)</td>
+        <td>3 200 €</td>
+      </tr>
+      <tr>
+        <td class="fw-600">Lot 3</td>
+        <td>Parcours formation de bout en bout (formulaires, relances, qualite)</td>
+        <td>3 500 €</td>
+      </tr>
+      <tr>
+        <td class="fw-600">Lot 4</td>
+        <td>Traitement automatise des donnees & reporting</td>
+        <td>2 200 €</td>
+      </tr>
+      <tr>
+        <td class="fw-600">Lot 5</td>
+        <td>Profils utilisateurs & gestion des droits d'acces</td>
+        <td>1 800 €</td>
+      </tr>
+      <tr class="pricing-total">
+        <td colspan="2">TOTAL</td>
+        <td>13 500 €</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <h3>Investissement total</h3>
+    <p>L'ensemble de la mission couvre l'audit, la refonte, les automatisations, les formulaires, le reporting et la gestion des droits pour vos 3 entites.</p>
+    <div class="price-big">13 500 € HT</div>
+    <div class="price-note">Soit 16 200 € TTC — Paiement en 3 fois possible (voir conditions)</div>
+  </div>
+
+  <div class="page-footer">
+    <span>Proposition PROP-2026-0301 — Confidentiel</span>
+    <span>Page 5 / 7</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE 5 — PLANNING & METHODOLOGIE
+     ══════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Planning & Methodologie</span>
+    <span class="page-header-num">06 / 07</span>
+  </div>
+
+  <div class="section-number">06</div>
+  <h2>Le calendrier <span>previsionnel</span></h2>
+  <p class="section-lead">Une mission de 8 a 10 semaines, structuree en phases progressives avec des points de validation reguliers.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-week">Semaines 1-2</div>
+      <div class="timeline-title">Phase 1 — Audit & Cadrage</div>
+      <div class="timeline-desc">Reunion de lancement. Audit de l'Airtable existant. Cartographie des processus des 3 entites. Livrable : schema du modele de donnees cible + document de cadrage valide.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaines 3-4</div>
+      <div class="timeline-title">Phase 2 — Refonte Airtable & Integrations</div>
+      <div class="timeline-desc">Implementation du nouveau modele de donnees. Migration des donnees. Debut des scenarios Make. Livrable : base Airtable refaite + premieres automatisations operationnelles.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaines 5-7</div>
+      <div class="timeline-title">Phase 3 — Parcours & Formulaires</div>
+      <div class="timeline-desc">Creation des formulaires (inscription, satisfaction, reclamations). Mise en place des sequences de relances. Integration bout en bout. Livrable : parcours complet fonctionnel.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaines 8-9</div>
+      <div class="timeline-title">Phase 4 — Reporting & Droits</div>
+      <div class="timeline-desc">Dashboards et rapports automatises. Configuration des profils et permissions. Tests avec les equipes. Livrable : plateforme complete avec acces differencies.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaine 10</div>
+      <div class="timeline-title">Phase 5 — Formation & Transfert</div>
+      <div class="timeline-desc">Formation des equipes (2h par profil). Documentation utilisateur. Accompagnement au demarrage. Livrable : documentation + equipes autonomes.</div>
+    </div>
+  </div>
+
+  <h3>Methodologie</h3>
+  <div class="two-col">
+    <div>
+      <h4>Points de suivi</h4>
+      <ul class="check-list">
+        <li>Point hebdomadaire de 30 min (visio)</li>
+        <li>Compte-rendu ecrit apres chaque point</li>
+        <li>Validation formelle a chaque fin de phase</li>
+        <li>Canal de communication dedie (Slack ou email)</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Livrables</h4>
+      <ul class="check-list">
+        <li>Documentation complete du modele de donnees</li>
+        <li>Guide d'utilisation par profil</li>
+        <li>Documentation technique des scenarios Make</li>
+        <li>Matrice des droits d'acces</li>
+        <li>Video de formation (enregistrements des sessions)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Proposition PROP-2026-0301 — Confidentiel</span>
+    <span>Page 6 / 7</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE 6 — CONDITIONS & SIGNATURE
+     ══════════════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-header">
+    <span class="page-header-title">Conditions & Acceptation</span>
+    <span class="page-header-num">07 / 07</span>
+  </div>
+
+  <div class="section-number">07</div>
+  <h2>Conditions <span>generales</span></h2>
+  <p class="section-lead">Les modalites de collaboration, de facturation et d'engagement.</p>
+
+  <div class="conditions">
+    <h4>Modalites de paiement</h4>
+    <p><strong>Option 1 — Paiement en 3 fois :</strong> 40% a la signature (5 400 €), 30% a la fin de la Phase 2 (4 050 €), 30% a la livraison finale (4 050 €).</p>
+    <p><strong>Option 2 — Paiement integral :</strong> 100% a la signature avec une remise de 5%, soit <strong>12 825 € HT</strong> au lieu de 13 500 € HT.</p>
+    <p>Facturation via Pennylane. Reglement par virement bancaire sous 15 jours.</p>
+  </div>
+
+  <div class="conditions" style="margin-top: 20px;">
+    <h4>Engagements</h4>
+    <p><strong>Validite :</strong> Cette proposition est valable 30 jours a compter du 3 mars 2026.</p>
+    <p><strong>Delai de demarrage :</strong> La mission demarre dans les 5 jours ouvrables suivant la signature.</p>
+    <p><strong>Prerequis client :</strong> Acces administrateur a Airtable, Make, Pennylane, WebinarJam et Systeme.io. Un interlocuteur dedie disponible pour les validations.</p>
+    <p><strong>Confidentialite :</strong> Toutes les donnees et informations echangees dans le cadre de cette mission sont strictement confidentielles.</p>
+    <p><strong>Maintenance :</strong> Un forfait de maintenance optionnel pourra etre propose a l'issue de la mission (support, evolutions, nouveaux scenarios).</p>
+  </div>
+
+  <div class="conditions" style="margin-top: 20px;">
+    <h4>Hors perimetre</h4>
+    <p>Les elements suivants ne sont pas inclus dans cette proposition : abonnements aux outils (Airtable, Make, etc.), developpement de site web, creation de contenu de formation, achat de noms de domaine ou hebergement.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <h3>Acceptation de la proposition</h3>
+  <p style="font-size: 13px; color: var(--text-light);">En signant ci-dessous, les parties acceptent les termes de cette proposition commerciale.</p>
+
+  <div class="signature-grid">
+    <div class="signature-box">
+      <h5>Le prestataire</h5>
+      <p class="fw-600">Antoine Carle</p>
+      <p>Consultant Digital & Automatisations</p>
+      <div class="signature-line">Date et signature</div>
+    </div>
+    <div class="signature-box">
+      <h5>Le client</h5>
+      <p class="fw-600">Arenas Dentistes</p>
+      <p>Dr. Antoine Diss / Soizic Le Boucher</p>
+      <div class="signature-line">Date et signature (precede de la mention "Bon pour accord")</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Proposition PROP-2026-0301 — Confidentiel</span>
+    <span>Page 7 / 7</span>
+  </div>
+</div>
+
+</body>
+</html>
