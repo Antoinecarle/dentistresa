@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Proposition commerciale - Arenas Dentistes & Generation Implant",
   "scripts": {
-    "start": "npx serve -s . -l $PORT"
+    "start": "npx serve . -l $PORT --no-clipboard"
   },
   "engines": {
     "node": ">=18"
