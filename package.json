@@ -1,0 +1,11 @@
+{
+  "name": "dentistresa",
+  "version": "1.0.0",
+  "description": "Proposition commerciale - Arenas Dentistes & Generation Implant",
+  "scripts": {
+    "start": "npx serve -s . -l $PORT"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
